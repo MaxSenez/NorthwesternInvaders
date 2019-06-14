@@ -315,7 +315,7 @@ namespace NorthwesternInvaders
                 e.Graphics.DrawImage(Properties.Resources.HuskieInvader, i.x, i.y, i.width, i.height);
 
             }
-            foreach (Bullet b in bullets)
+            foreach (Bullet b in bullets)  
             {
                 e.Graphics.FillRectangle(bulletBrush, b.x, b.y, b.width, b.height);
             }
