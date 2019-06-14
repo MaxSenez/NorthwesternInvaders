@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Media;
 
 namespace NorthwesternInvaders
 {
@@ -17,13 +18,15 @@ namespace NorthwesternInvaders
         Char letter = 'A';
         int select;
         int score;
+        
+        SoundPlayer newHighscore = new SoundPlayer(Properties.Resources.NewHighscore);
         public NewHighscore()
         {
             InitializeComponent();
 
             highscoreLabel.Text = "" + GameScreen.highscore.ToString("0000000");
             score = GameScreen.highscore;
-            
+            newHighscore.Play();
             select = 1;
         }
 

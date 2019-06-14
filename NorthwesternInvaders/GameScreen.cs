@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Xml;
+using System.Media;
 
 namespace NorthwesternInvaders
 {
@@ -27,6 +28,13 @@ namespace NorthwesternInvaders
         List<Invader> invaders = new List<Invader>();
         List<Bullet> bullets = new List<Bullet>();
         Random invRand = new Random();
+
+        //Sounds
+        SoundPlayer alienDeath = new SoundPlayer(Properties.Resources.AlienDeath);
+        SoundPlayer beamShot = new SoundPlayer(Properties.Resources.BeamShot);
+        SoundPlayer bulletShot = new SoundPlayer(Properties.Resources.bulletShot);
+        SoundPlayer deathSound = new SoundPlayer(Properties.Resources.DeathSound);
+       
 
         string invaderDirection = "right";
         int downCounter = 0, bulletCounter = 50, randValue, bulletSpeed = 10,
@@ -108,6 +116,7 @@ namespace NorthwesternInvaders
                     invaders[randValue].y + invaders[randValue].height, 5, 5, bulletSpeed);
                 bullets.Add(bullet);
                 bulletCounter = 35;
+                bulletShot.Play();
 
             }
             foreach (Bullet b in bullets)
@@ -163,6 +172,7 @@ namespace NorthwesternInvaders
                     invaders.Remove(invader);
                     shoot = false;
                     beam.Y = d.hb.Y;
+                    alienDeath.Play();
                     break;
                 }
 
@@ -205,6 +215,7 @@ namespace NorthwesternInvaders
                     if (sheild == false)
                     {
                         lives--;
+                        deathSound.Play();
                         sheild = true;
                         sheildTick = 0;
                         if (lives == 3)
@@ -297,6 +308,7 @@ namespace NorthwesternInvaders
                     {
                         shoot = true;
                         beam.X = d.hb.X;
+                        beamShot.Play();
                     }
                     break;
             }
@@ -307,7 +319,7 @@ namespace NorthwesternInvaders
         {
             if (characterDraw == true)
             {
-                e.Graphics.DrawRectangle(box, d.hb);
+                e.Graphics.DrawImage(Properties.Resources.Defender, d.hb);
             }
 
             foreach (Invader i in invaders)

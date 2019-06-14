@@ -135,6 +135,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HighscoresXML.xml" />
+    <None Include="Resources\NewHighscore.wav" />
+    <None Include="Resources\GameOverSound.wav" />
+    <None Include="Resources\DeathSound.wav" />
+    <None Include="Resources\bulletShot.wav" />
+    <None Include="Resources\BeamShot.wav" />
+    <None Include="Resources\AlienDeath.wav" />
     <None Include="Resources\RamInvader.png" />
     <None Include="Resources\HuskieInvader.png" />
     <None Include="Resources\Defender.png" />

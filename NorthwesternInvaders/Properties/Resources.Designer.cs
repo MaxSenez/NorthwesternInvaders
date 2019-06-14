@@ -61,12 +61,48 @@ namespace NorthwesternInvaders.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream AlienDeath {
+            get {
+                return ResourceManager.GetStream("AlienDeath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream BeamShot {
+            get {
+                return ResourceManager.GetStream("BeamShot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream bulletShot {
+            get {
+                return ResourceManager.GetStream("bulletShot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap DeadDefender {
             get {
                 object obj = ResourceManager.GetObject("DeadDefender", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream DeathSound {
+            get {
+                return ResourceManager.GetStream("DeathSound", resourceCulture);
             }
         }
         
@@ -97,6 +133,15 @@ namespace NorthwesternInvaders.Properties {
             get {
                 object obj = ResourceManager.GetObject("GameOverScreen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream GameOverSound {
+            get {
+                return ResourceManager.GetStream("GameOverSound", resourceCulture);
             }
         }
         
@@ -137,6 +182,15 @@ namespace NorthwesternInvaders.Properties {
             get {
                 object obj = ResourceManager.GetObject("MenuScreen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream NewHighscore {
+            get {
+                return ResourceManager.GetStream("NewHighscore", resourceCulture);
             }
         }
         
